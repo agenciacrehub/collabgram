@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./favicon_io/site.webmanifest">
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -52,6 +53,24 @@
 
         .faq-item:hover {
             background-color: rgba(221, 107, 32, 0.05);
+        }
+
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-content {
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -148,7 +167,7 @@
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                         alt="Equipe trabalhando" class="rounded-xl shadow-2xl w-full max-w-md border-4 border-white">
                     <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
                         <div class="flex items-center">
@@ -319,8 +338,8 @@
 
                 <div class="bg-white p-8 rounded-xl shadow-md testimonial-card transition duration-300">
                     <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4"
-                            alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-12 h-12 rounded-full mr-4, alt=" Cliente">
                         <div>
                             <h4 class="font-heading font-bold text-gray-800">Ricardo Almeida</h4>
                             <p class="text-orange-500 text-sm">Loja de Suplementos</p>
@@ -407,7 +426,7 @@
                         <p class="text-purple-100 mb-4">De 300 para 4.500 seguidores em 3 meses</p>
                         <div class="flex justify-between text-white">
                             <div>
-                                <p class="text-sm">Alcance</p>
+                                <p class="text-sm">Alcão</p>
                                 <p class="font-bold">+780%</p>
                             </div>
                             <div>
@@ -447,7 +466,7 @@
                 </div>
 
                 <div class="portfolio-item relative rounded-xl overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1581092921461-39b2f1db99bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    <img src="https://images.unsplash.com/photo-1691187861257-a56c4aa2d7fb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                         alt="Antes e Depois" class="w-full h-64 object-cover">
                     <div
                         class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 transition duration-300 flex flex-col justify-end p-6">
@@ -477,7 +496,7 @@
                         <h3 class="font-heading font-bold text-2xl md:text-3xl mb-4">Seu negócio pode ser nosso próximo
                             case de sucesso</h3>
                         <p class="text-purple-100 mb-6">
-                            Agende uma chamada estratégica gratuita com nosso time para entender como podemos
+                            Agende uma chamada estratégica gratuita com nosso team para entender como podemos
                             impulsionar seus resultados.
                         </p>
                         <a href="#contato"
@@ -556,10 +575,10 @@
                             <span>Relatório detalhado</span>
                         </li>
                     </ul>
-                    <a href="#contato"
-                        class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
-                        Saiba mais
-                    </a>
+                    <button onclick="openPlanModal('Collab Moderado', 'R$ 997/mês')"
+                        class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
+                        Quero este plano
+                    </button>
                 </div>
 
                 <!-- Plano Intermediário (Destaque) -->
@@ -604,10 +623,10 @@
                             <span>Relatório mensal detalhado</span>
                         </li>
                     </ul>
-                    <a href="#contato"
-                        class="block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full transition duration-300">
+                    <button onclick="openPlanModal('Collab Essencial', 'R$ 1.997/mês')"
+                        class="w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full transition duration-300">
                         Quero este plano
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Plano Avançado -->
@@ -648,19 +667,19 @@
                             <span>Relatório semanal detalhado + consultoria</span>
                         </li>
                     </ul>
-                    <a href="#contato"
-                        class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
-                        Saiba mais
-                    </a>
+                    <button onclick="openPlanModal('Collab Supremo', 'R$ 3.497/mês')"
+                        class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
+                        Quero este plano
+                    </button>
                 </div>
             </div>
 
             <div class="mt-12 text-center">
                 <p class="text-gray-600 mb-6">Não encontrou o que procurava?</p>
-                <a href="#contato"
+                <button onclick="openPlanModal('Plano Personalizado', 'Sob consulta')"
                     class="inline-block border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold px-8 py-3 rounded-full transition duration-300">
                     Fale com nosso time sobre um plano personalizado
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -791,7 +810,7 @@
                         <div class="hidden mt-4 text-gray-600" id="faq-content-3">
                             <p>Todos os nossos planos têm contrato mínimo de 3 meses, porque esse é o tempo necessário
                                 para implementar uma estratégia consistente e começar a colher resultados.</p>
-                            <p class="mt-3">Após esse período, o contrato vira mensal e pode ser cancelado a qualquer
+                            <p class="mt-3">Após esse período, o contrato vira mensal e pode be cancelado a qualquer
                                 momento com aviso prévio de 30 dias.</p>
                             <p class="mt-3">A maioria dos nossos clientes permanece conosco por pelo menos 12 meses para
                                 consolidar seus resultados e continuar crescendo.</p>
@@ -1017,6 +1036,70 @@
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
+    <!-- Modal de Seleção de Plano -->
+    <div id="planModal"
+        class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 opacity-0 invisible">
+        <div class="modal-content bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-heading font-bold text-xl text-gray-800" id="modalPlanTitle">Selecionar Plano</h3>
+                <button onclick="closePlanModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="mb-6">
+                <p class="text-gray-600">Você está interessado no plano:</p>
+                <p class="font-heading font-bold text-purple-600 text-lg" id="modalPlanName">Collab Essencial</p>
+                <p class="text-gray-600" id="modalPlanPrice">R$ 1.997/mês</p>
+            </div>
+
+            <form id="planForm" class="space-y-4">
+                <input type="hidden" id="selectedPlan" name="selectedPlan">
+
+                <div>
+                    <label for="modalNome" class="block text-gray-700 text-sm font-medium mb-1">Nome completo*</label>
+                    <input type="text" id="modalNome" name="nome"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        required>
+                </div>
+
+                <div>
+                    <label for="modalEmail" class="block text-gray-700 text-sm font-medium mb-1">E-mail*</label>
+                    <input type="email" id="modalEmail" name="email"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        required>
+                </div>
+
+                <div>
+                    <label for="modalWhatsApp" class="block text-gray-700 text-sm font-medium mb-1">WhatsApp*</label>
+                    <input type="tel" id="modalWhatsApp" name="whatsapp"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        required>
+                </div>
+
+                <div>
+                    <label for="modalMensagem" class="block text-gray-700 text-sm font-medium mb-1">Alguma
+                        observação?</label>
+                    <textarea id="modalMensagem" name="mensagem" rows="3"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                </div>
+
+                <div class="flex items-center">
+                    <input type="checkbox" id="modalTermos" name="termos"
+                        class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" required>
+                    <label for="modalTermos" class="ml-2 block text-sm text-gray-700">
+                        Concordo em receber comunicações da Collabgram
+                    </label>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Enviar interesse no plano
+                </button>
+            </form>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -1057,7 +1140,7 @@
             });
         });
 
-        // Form Submission
+        // Form Submission (main form)
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function (e) {
@@ -1075,6 +1158,53 @@
                 });
             });
         }
+
+        // Plan Modal Functions
+        function openPlanModal(planName, planPrice) {
+            const modal = document.getElementById('planModal');
+            const modalPlanTitle = document.getElementById('modalPlanTitle');
+            const modalPlanName = document.getElementById('modalPlanName');
+            const modalPlanPrice = document.getElementById('modalPlanPrice');
+            const selectedPlanInput = document.getElementById('selectedPlan');
+
+            modalPlanTitle.textContent = `Selecionar ${planName}`;
+            modalPlanName.textContent = planName;
+            modalPlanPrice.textContent = planPrice;
+            selectedPlanInput.value = planName;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePlanModal() {
+            const modal = document.getElementById('planModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Plan Form Submission
+        const planForm = document.getElementById('planForm');
+        if (planForm) {
+            planForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Here you would typically send the form data to your server
+                // For this example, we'll just show an alert
+                const planName = document.getElementById('modalPlanName').textContent;
+                alert(`Obrigado pelo seu interesse no plano ${planName}! Nossa equipe entrará em contato em breve para finalizar sua adesão.`);
+
+                planForm.reset();
+                closePlanModal();
+            });
+        }
+
+        // Close modal when clicking outside
+        const modal = document.getElementById('planModal');
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closePlanModal();
+            }
+        });
 
         // Animation on Scroll
         function animateOnScroll() {
