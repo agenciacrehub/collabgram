@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabgram | Agência de Social Media</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B46C1 0%, #DD6B20 100%);
+        }
+
+        .highlight-plan {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: rgba(221, 107, 32, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center mr-3">
+                    <i class="fas fa-rocket text-white text-lg"></i>
+                </div>
+                <span class="font-heading font-bold text-2xl text-purple-800">Collab<span
+                        class="text-orange-500">gram</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#beneficios" class="text-gray-700 hover:text-purple-600 font-medium">Benefícios</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-purple-600 font-medium">Portfólio</a>
+                <a href="#planos" class="text-gray-700 hover:text-purple-600 font-medium">Planos</a>
+                <a href="#sobre" class="text-gray-700 hover:text-purple-600 font-medium">Sobre</a>
+                <a href="#faq" class="text-gray-700 hover:text-purple-600 font-medium">FAQ</a>
+            </nav>
+            <a href="#contato"
+                class="hidden md:block bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-full transition duration-300">
+                Fale conosco
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#beneficios" class="text-gray-700 hover:text-purple-600 font-medium">Benefícios</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-purple-600 font-medium">Portfólio</a>
+                <a href="#planos" class="text-gray-700 hover:text-purple-600 font-medium">Planos</a>
+                <a href="#sobre" class="text-gray-700 hover:text-purple-600 font-medium">Sobre</a>
+                <a href="#faq" class="text-gray-700 hover:text-purple-600 font-medium">FAQ</a>
+                <a href="#contato"
+                    class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-full text-center transition duration-300">
+                    Fale conosco
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+                    Transforme sua presença digital.<br>
+                </h1>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+                    <span class="text-orange-200">Seja visto.</span> <span class="text-purple-200">Seja lembrado.</span>
+                    <span class="text-white">Seja vendido.</span>
+                </h2>
+                <p class="text-xl md:text-1xl text-purple-100 mb-8">
+                    Uma agência de social media feita para MEIs, startups e empresas que querem crescer com estratégia,
+                    criatividade e resultados.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#planos"
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-center transition duration-300 transform hover:scale-105 shadow-lg">
+                        Quero transformar meu negócio agora
+                    </a>
+                    <a href="#portfolio"
+                        class="bg-white hover:bg-gray-100 text-purple-800 font-bold px-8 py-4 rounded-full text-center transition duration-300">
+                        Ver resultados
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-purple-100 font-medium">+150 negócios transformados</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-300 mr-1"></i>
+                            <i class="fas fa-star text-yellow-300 mr-1"></i>
+                            <i class="fas fa-star text-yellow-300 mr-1"></i>
+                            <i class="fas fa-star text-yellow-300 mr-1"></i>
+                            <i class="fas fa-star text-yellow-300 mr-1"></i>
+                            <span class="text-white ml-2">5.0 (87 avaliações)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Equipe trabalhando" class="rounded-xl shadow-2xl w-full max-w-md border-4 border-white">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-lg mr-3">
+                                <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Média de crescimento</p>
+                                <p class="font-bold text-purple-800">+214%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="bg-white py-8">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-500 mb-6">Trabalhamos com negócios de todos os portes</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://via.placeholder.com/120x40?text=Startup" alt="Startup"
+                    class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=MEI" alt="MEI"
+                    class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Empresa" alt="Empresa"
+                    class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=E-commerce" alt="E-commerce"
+                    class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Consultoria" alt="Consultoria"
+                    class="h-8 opacity-70 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">Diferenciais</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+                    Marketing com <span class="text-purple-600">Propósito</span>.<br>
+                    Conteúdo com <span class="text-orange-500">Resultado</span>.
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nossa abordagem vai além de posts bonitos. Criamos estratégias que realmente movem o seu negócio.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-gray-800 mb-3">Estratégias personalizadas</h3>
+                    <p class="text-gray-600">
+                        Criamos planos exclusivos para o seu tipo de negócio, alinhados com seus objetivos e
+                        público-alvo.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-gray-800 mb-3">Aumento de visibilidade</h3>
+                    <p class="text-gray-600">
+                        Posicionamos sua marca como autoridade no Instagram, aumentando alcance e reconhecimento.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-gray-800 mb-3">Análise de dados</h3>
+                    <p class="text-gray-600">
+                        Monitoramos métricas importantes e ajustamos estratégias para maximizar seus resultados.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-hands-helping text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-gray-800 mb-3">Parceria real</h3>
+                    <p class="text-gray-600">
+                        Participamos ativamente da rotina da sua empresa, entendendo seus desafios e oportunidades.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gradient-to-r from-purple-50 to-orange-50 rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-8 md:mb-0">
+                        <h3 class="font-heading font-bold text-2xl text-gray-800 mb-4">Quer ver o que podemos fazer pelo
+                            seu negócio?</h3>
+                        <p class="text-gray-600 mb-6">
+                            Agende uma consultoria gratuita de 30 minutos com nosso time de especialistas.
+                        </p>
+                        <a href="#contato"
+                            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full transition duration-300">
+                            Agendar consultoria gratuita
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="bg-white p-4 rounded-xl shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-orange-100 p-3 rounded-lg mr-3">
+                                    <i class="fas fa-calendar-check text-orange-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Disponibilidade</p>
+                                    <p class="font-bold text-purple-800">Agendas abertas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="py-16 md:py-24 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">Depoimentos</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+                    O que nossos <span class="text-purple-600">clientes</span> dizem
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Veja como transformamos a presença digital de negócios como o seu.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4"
+                            alt="Cliente">
+                        <div>
+                            <h4 class="font-heading font-bold text-gray-800">Ana Carolina</h4>
+                            <p class="text-orange-500 text-sm">Consultoria Financeira</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Em 3 meses com a Collabgram, meu perfil profissional explodiu! Saí de 300 para 4.500 seguidores
+                        e consegui fechar 12 novos clientes só pelo Instagram."
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-chart-line text-purple-600 mr-2"></i>
+                        <span>+1400% crescimento em seguidores</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4"
+                            alt="Cliente">
+                        <div>
+                            <h4 class="font-heading font-bold text-gray-800">Ricardo Almeida</h4>
+                            <p class="text-orange-500 text-sm">Loja de Suplementos</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "A estratégia de conteúdo que criaram para minha loja foi incrível. Meu faturamento online
+                        aumentou 300% e agora tenho uma comunidade engajada."
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-dollar-sign text-purple-600 mr-2"></i>
+                        <span>3x mais vendas pelo Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4"
+                            alt="Cliente">
+                        <div>
+                            <h4 class="font-heading font-bold text-gray-800">Fernanda Costa</h4>
+                            <p class="text-orange-500 text-sm">Clínica de Estética</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Finalmente encontrei uma agência que entende meu negócio. Eles não só criam conteúdo, mas
+                        constroem uma estratégia completa que gera resultados reais."
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-check text-purple-600 mr-2"></i>
+                        <span>Agenda lotada 3 meses à frente</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#contato"
+                    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-full transition duration-300">
+                    Quero resultados como esses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">Resultados</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+                    Alguns dos nossos <span class="text-purple-600">resultados</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Veja cases reais de negócios que transformamos com estratégia de conteúdo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        alt="Antes e Depois" class="w-full h-64 object-cover">
+                    <div
+                        class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="font-heading font-bold text-white text-xl mb-2">Consultoria Financeira</h3>
+                        <p class="text-purple-100 mb-4">De 300 para 4.500 seguidores em 3 meses</p>
+                        <div class="flex justify-between text-white">
+                            <div>
+                                <p class="text-sm">Alcance</p>
+                                <p class="font-bold">+780%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Engajamento</p>
+                                <p class="font-bold">+320%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Conversão</p>
+                                <p class="font-bold">12 clientes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Antes e Depois" class="w-full h-64 object-cover">
+                    <div
+                        class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="font-heading font-bold text-white text-xl mb-2">E-commerce de Suplementos</h3>
+                        <p class="text-purple-100 mb-4">Faturamento 3x maior em 4 meses</p>
+                        <div class="flex justify-between text-white">
+                            <div>
+                                <p class="text-sm">Vendas</p>
+                                <p class="font-bold">+300%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Ticket Médio</p>
+                                <p class="font-bold">+45%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Recompra</p>
+                                <p class="font-bold">+68%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581092921461-39b2f1db99bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Antes e Depois" class="w-full h-64 object-cover">
+                    <div
+                        class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="font-heading font-bold text-white text-xl mb-2">Clínica de Estética</h3>
+                        <p class="text-purple-100 mb-4">Agenda lotada 3 meses à frente</p>
+                        <div class="flex justify-between text-white">
+                            <div>
+                                <p class="text-sm">Alcance</p>
+                                <p class="font-bold">+450%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Agendamentos</p>
+                                <p class="font-bold">+210%</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Indicações</p>
+                                <p class="font-bold">+175%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gradient-to-r from-purple-600 to-orange-500 rounded-2xl p-8 md:p-12 text-white">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-8 md:mb-0">
+                        <h3 class="font-heading font-bold text-2xl md:text-3xl mb-4">Seu negócio pode ser nosso próximo
+                            case de sucesso</h3>
+                        <p class="text-purple-100 mb-6">
+                            Agende uma chamada estratégica gratuita com nosso time para entender como podemos
+                            impulsionar seus resultados.
+                        </p>
+                        <a href="#contato"
+                            class="inline-block bg-white hover:bg-gray-100 text-purple-800 font-bold px-8 py-3 rounded-full transition duration-300">
+                            Agendar chamada gratuita
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
+                            <div class="flex items-center">
+                                <div class="bg-white p-3 rounded-lg mr-3">
+                                    <i class="fas fa-medal text-orange-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-purple-100 text-sm">Nossa garantia</p>
+                                    <p class="font-bold text-white">Resultados em 90 dias</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">Planos</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+                    Escolha o plano ideal para o seu <span class="text-purple-600">negócio</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Oferecemos soluções completas para cada etapa do seu crescimento digital.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Básico -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">Iniciante</span>
+                        <h3 class="font-heading font-bold text-2xl text-gray-800 mb-2">Collab Moderado</h3>
+                        <p class="text-gray-600 mb-4">Ideal para quem está começando</p>
+                        <div class="flex items-end">
+                            <span class="text-4xl font-bold text-gray-800">R$ 997</span>
+                            <span class="text-gray-500 ml-2">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>12 posts estratégicos por mês</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>3 stories diários</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>1 roteiro de Reels por semana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Planejamento de conteúdo</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times mt-1 mr-3"></i>
+                            <span>Gestão de anúncios</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times mt-1 mr-3"></i>
+                            <span>Relatório detalhado</span>
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
+                        Saiba mais
+                    </a>
+                </div>
+
+                <!-- Plano Intermediário (Destaque) -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-purple-500 highlight-plan relative">
+                    <div
+                        class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        MAIS ESCOLHIDO
+                    </div>
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">Recomendado</span>
+                        <h3 class="font-heading font-bold text-2xl text-gray-800 mb-2">Collab Essencial</h3>
+                        <p class="text-gray-600 mb-4">Solução completa para crescimento</p>
+                        <div class="flex items-end">
+                            <span class="text-4xl font-bold text-gray-800">R$ 1.997</span>
+                            <span class="text-gray-500 ml-2">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>20 posts estratégicos por mês</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>5 stories diários</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>2 roteiros de Reels por semana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Planejamento de conteúdo avançado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Gestão de anúncios básica</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Relatório mensal detalhado</span>
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full transition duration-300">
+                        Quero este plano
+                    </a>
+                </div>
+
+                <!-- Plano Avançado -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">Avançado</span>
+                        <h3 class="font-heading font-bold text-2xl text-gray-800 mb-2">Collab Supremo</h3>
+                        <p class="text-gray-600 mb-4">Para quem quer resultados exponenciais</p>
+                        <div class="flex items-end">
+                            <span class="text-4xl font-bold text-gray-800">R$ 3.497</span>
+                            <span class="text-gray-500 ml-2">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>30 posts estratégicos por mês</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>8 stories diários</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>4 roteiros de Reels por semana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Planejamento de conteúdo premium</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Gestão completa de anúncios</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Relatório semanal detalhado + consultoria</span>
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition duration-300">
+                        Saiba mais
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">Não encontrou o que procurava?</p>
+                <a href="#contato"
+                    class="inline-block border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold px-8 py-3 rounded-full transition duration-300">
+                    Fale com nosso time sobre um plano personalizado
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <span
+                        class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">Sobre
+                        nós</span>
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-6">
+                        Somos uma agência <span class="text-purple-600">colaborativa</span> que acredita no poder do
+                        conteúdo estratégico
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Participamos de verdade do dia a dia dos nossos clientes — e é por isso que eles colhem
+                        resultados reais. Nossa equipe é formada por especialistas em marketing digital, criação de
+                        conteúdo e análise de dados.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-users text-orange-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-gray-800 mb-1">+150 clientes</h4>
+                                <p class="text-gray-600 text-sm">Atendidos em todo o Brasil</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-trophy text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-gray-800 mb-1">5 anos</h4>
+                                <p class="text-gray-600 text-sm">Transformando presenças digitais</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contato"
+                        class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-full transition duration-300">
+                        Vamos crescer juntos?
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Equipe Collabgram" class="rounded-xl shadow-xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-4 rounded-lg mr-4">
+                                    <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-gray-800 mb-1">Nossa missão</h4>
+                                    <p class="text-gray-600 text-sm">Ajudar pequenos e médios negócios a brilharem
+                                        online</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3">FAQ</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+                    Tem <span class="text-purple-600">dúvidas</span>? A gente responde
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Reunimos as perguntas mais frequentes para te ajudar a tomar a melhor decisão.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="faq-item p-6 border-b border-gray-200 cursor-pointer" onclick="toggleFAQ(1)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-heading font-bold text-lg text-gray-800">Como é o processo de trabalho?</h3>
+                            <i class="fas fa-chevron-down text-purple-600 transition-transform" id="faq-icon-1"></i>
+                        </div>
+                        <div class="hidden mt-4 text-gray-600" id="faq-content-1">
+                            <p>Nosso processo é dividido em 4 etapas:</p>
+                            <ol class="list-decimal pl-5 mt-2 space-y-2">
+                                <li><strong>Diagnóstico:</strong> Análise completa do seu perfil e concorrência</li>
+                                <li><strong>Estratégia:</strong> Definição de persona, tom de voz e calendário de
+                                    conteúdo</li>
+                                <li><strong>Execução:</strong> Criação e publicação dos conteúdos alinhados com sua
+                                    marca</li>
+                                <li><strong>Otimização:</strong> Ajustes contínuos baseados em dados e resultados</li>
+                            </ol>
+                            <p class="mt-3">Tudo isso com reuniões quinzenais para alinhamento e transparência total.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item p-6 border-b border-gray-200 cursor-pointer" onclick="toggleFAQ(2)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-heading font-bold text-lg text-gray-800">Em quanto tempo vejo resultados?
+                            </h3>
+                            <i class="fas fa-chevron-down text-purple-600 transition-transform" id="faq-icon-2"></i>
+                        </div>
+                        <div class="hidden mt-4 text-gray-600" id="faq-content-2">
+                            <p>Os primeiros indicadores de melhora geralmente aparecem em 30-45 dias (aumento de
+                                engajamento, alcance orgânico e qualidade do perfil).</p>
+                            <p class="mt-3">Resultados mais expressivos como aumento significativo de seguidores e
+                                conversões em vendas costumam acontecer a partir do 3º mês, quando o algoritmo já
+                                reconhece sua conta como relevante.</p>
+                            <p class="mt-3 font-medium text-purple-600">Nossa garantia: se em 90 dias você não perceber
+                                melhoras significativas, devolvemos seu investimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item p-6 border-b border-gray-200 cursor-pointer" onclick="toggleFAQ(3)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-heading font-bold text-lg text-gray-800">Os pacotes são mensais? Há
+                                fidelidade?</h3>
+                            <i class="fas fa-chevron-down text-purple-600 transition-transform" id="faq-icon-3"></i>
+                        </div>
+                        <div class="hidden mt-4 text-gray-600" id="faq-content-3">
+                            <p>Todos os nossos planos têm contrato mínimo de 3 meses, porque esse é o tempo necessário
+                                para implementar uma estratégia consistente e começar a colher resultados.</p>
+                            <p class="mt-3">Após esse período, o contrato vira mensal e pode ser cancelado a qualquer
+                                momento com aviso prévio de 30 dias.</p>
+                            <p class="mt-3">A maioria dos nossos clientes permanece conosco por pelo menos 12 meses para
+                                consolidar seus resultados e continuar crescendo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item p-6 cursor-pointer" onclick="toggleFAQ(4)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-heading font-bold text-lg text-gray-800">Vocês também criam anúncios pagos?
+                            </h3>
+                            <i class="fas fa-chevron-down text-purple-600 transition-transform" id="faq-icon-4"></i>
+                        </div>
+                        <div class="hidden mt-4 text-gray-600" id="faq-content-4">
+                            <p>Sim! Nos planos Essencial e Supremo já incluímos gestão básica de anúncios. Para
+                                campanhas mais robustas, oferecemos um serviço adicional completo de tráfego pago.</p>
+                            <p class="mt-3">Nossa abordagem com anúncios é sempre estratégica:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>Definimos objetivos claros (vendas, leads, engajamento)</li>
+                                <li>Criamos públicos personalizados baseados em seus clientes ideais</li>
+                                <li>Desenvolvemos criativos otimizados para conversão</li>
+                                <li>Acompanhamos e ajustamos diariamente para melhor ROI</li>
+                            </ul>
+                            <p class="mt-3">O investimento em anúncios é separado do valor do plano, pois varia conforme
+                                a estratégia de cada negócio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">Ainda tem dúvidas? Fale diretamente com nosso time.</p>
+                    <a href="#contato"
+                        class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-full transition duration-300">
+                        Falar com especialista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section id="contato" class="py-16 md:py-24 bg-gradient-to-r from-purple-600 to-orange-500 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">
+                    Seu conteúdo pode (e vai) <span class="text-orange-200">transformar</span> sua empresa
+                </h2>
+                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                    Não deixe seu crescimento digital para depois. Comece hoje mesmo a construir uma presença que vende.
+                </p>
+
+                <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 max-w-2xl mx-auto">
+                    <h3 class="font-heading font-bold text-2xl text-gray-800 mb-6">Preencha o formulário e nossa equipe
+                        entrará em contato</h3>
+
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="nome" class="block text-gray-700 text-sm font-medium mb-1">Nome
+                                    completo*</label>
+                                <input type="text" id="nome"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 text-sm font-medium mb-1">E-mail*</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="telefone"
+                                    class="block text-gray-700 text-sm font-medium mb-1">WhatsApp*</label>
+                                <input type="tel" id="telefone"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="negocio" class="block text-gray-700 text-sm font-medium mb-1">Tipo de
+                                    negócio*</label>
+                                <select id="negocio"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    required>
+                                    <option value="">Selecione</option>
+                                    <option value="mei">MEI/Autônomo</option>
+                                    <option value="startup">Startup</option>
+                                    <option value="empresa">Empresa</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 text-sm font-medium mb-1">Como podemos te
+                                ajudar?*</label>
+                            <textarea id="mensagem" rows="3"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                required></textarea>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="termos"
+                                class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" required>
+                            <label for="termos" class="ml-2 block text-sm text-gray-700">
+                                Concordo em receber comunicações da Collabgram
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            Quero uma presença digital estratégica agora
+                        </button>
+                    </form>
+
+                    <div
+                        class="mt-6 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-lock text-purple-600 mr-2"></i>
+                            <span class="text-sm text-gray-600">Seus dados estão seguros</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-600 mr-2"></i>
+                            <span class="text-sm text-gray-600">Resposta em até 24h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center mr-3">
+                            <i class="fas fa-rocket text-white text-lg"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl">Collab<span
+                                class="text-orange-500">gram</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Transformando presenças digitais desde 2018. Estratégia, criatividade e resultados para seu
+                        negócio.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Links úteis</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beneficios" class="text-gray-400 hover:text-white transition">Benefícios</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfólio</a></li>
+                        <li><a href="#planos" class="text-gray-400 hover:text-white transition">Planos</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre nós</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Contato</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-orange-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">contato@collabgram.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-orange-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">(11) 98765-4321</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-orange-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Teresina - PI</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Receba dicas exclusivas de marketing digital no seu e-mail.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail"
+                            class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2023 Collabgram. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Termos de uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Política de privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511987654321" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-110 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle Function
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Here you would typically send the form data to your server
+                // For this example, we'll just show an alert
+                alert('Obrigado pelo seu interesse! Nossa equipe entrará em contato em breve.');
+                form.reset();
+
+                // Scroll to top to see the alert (in case they're at bottom of page)
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Animation on Scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.portfolio-item, .testimonial-card, .faq-item');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.portfolio-item, .testimonial-card, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+        });
+
+        // Run once when page loads
+        window.addEventListener('load', animateOnScroll);
+
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>
